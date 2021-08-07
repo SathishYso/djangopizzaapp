@@ -1,0 +1,19 @@
+<html>
+    <h1> Pizzas Informations </h1>
+    <table>
+        <thead>
+            <th> pizzatype </th>
+            <th> pizzasize </th>
+            <th> pizzatoppings </th>
+        </thead>
+        <tr>
+        {% for pz in pizza %}
+            <td> {{pz.pizzatype}}</td>
+            <td> {{pz.pizzasize}}</td>
+            <td> {{pz.pizzatoppings}}</td>
+            <td><a href='#'> Update </a> <a href="/delete/{{pz.id}}}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>  
+            <a href ="/create"> <button type="button"> Add New Pizzas </button> </a>
+</html>  
